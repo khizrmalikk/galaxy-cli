@@ -18,7 +18,18 @@ console.log(
 program
   .name('galaxy')
   .description('CLI for creating Galaxy System apps')
-  .version('1.0.0');
+  .version('1.0.1');
+
+// Check if first argument looks like a project name (no dashes, not a known command)
+const args = process.argv.slice(2);
+const knownCommands = ['create', 'init', 'theme', 'add-feature', 'help', '--help', '-h', '--version', '-V'];
+const firstArg = args[0];
+
+// If first argument is not a known command and doesn't start with -, treat it as create command
+if (firstArg && !knownCommands.includes(firstArg) && !firstArg.startsWith('-')) {
+  // Insert 'create' command at the beginning
+  process.argv.splice(2, 0, 'create');
+}
 
 // Register commands
 program.addCommand(createCommand);

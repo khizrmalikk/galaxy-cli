@@ -1,6 +1,6 @@
 {
   "name": "create-galaxy-app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create Galaxy System apps with one command",
   "type": "module",
   "bin": {
