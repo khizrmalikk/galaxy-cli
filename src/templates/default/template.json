@@ -2,7 +2,7 @@
   "name": "galaxy-template",
   "version": "1.0.0",
   "description": "Template for Galaxy applications (both Core and Feature)",
-  "repository": "github:your-org/galaxy-template",
+  "repository": "github:khizrmalikk/template-core",
   "files": [
     "src/**/*",
     "public/**/*",

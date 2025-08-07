@@ -8,48 +8,38 @@ Before publishing or using this CLI in production, you need to replace the follo
 
 ### Package.json
 **File:** `/package.json`
-- **Line 16:** Replace `"url": "https://github.com/your-org/galaxy-cli"` with your actual GitHub repository URL
+- ✅ **Updated:** Repository URL set to `https://github.com/khizrmalikk/galaxy-cli`
 
 ### Template Repository
 **File:** `/src/commands/create.js`
-- **Line ~236 (commented):** Replace template URL:
-  ```javascript
-  // TODO: Replace with actual template repository URL
-  // Example: await degit('github:your-org/galaxy-template').clone(projectPath);
-  ```
+- ✅ **Updated:** Template URL set to `github:khizrmalikk/template-core`
   
-  You need to create one template repository:
-  - Galaxy template: `github:your-org/galaxy-template` (used for both Core and Feature apps)
+  Template repository created:
+  - Galaxy template: `github:khizrmalikk/template-core` (used for both Core and Feature apps)
 
 ### Template JSON File
 **File:** `/src/templates/default/template.json`
-
-Replace `"repository": "github:your-org/galaxy-template"` with your actual template repository URL.
+- ✅ **Updated:** Repository URL set to `github:khizrmalikk/template-core`
 
 ## 2. Documentation Links
 
 ### In Created Projects
-The CLI generates projects with documentation links that need updating:
-
 **File:** `/src/commands/create.js`
-- **Lines ~330-331:** Update documentation URLs:
+- ✅ **Updated:** Documentation URLs set to actual GitHub repositories:
   ```javascript
-  console.log(chalk.dim('  - Galaxy Docs: https://github.com/your-org/galaxy-docs'));
-  console.log(chalk.dim('  - Galaxy CLI: https://github.com/your-org/galaxy-cli'));
+  console.log(chalk.dim('  - Galaxy Docs: https://github.com/khizrmalikk/galaxy-cli#readme'));
+  console.log(chalk.dim('  - Galaxy CLI: https://github.com/khizrmalikk/galaxy-cli'));
   ```
 
 ### README.md
 **File:** `/README.md`
-- **Bottom section:** Update all documentation and resource links:
-  - Galaxy Architecture Guide URL
-  - Galaxy System Documentation URL
-  - Template Repository URL
+- ✅ **Updated:** All documentation and resource links updated to actual repositories
 
 ## 3. Author Information
 
 ### Package.json
 **File:** `/package.json`
-- **Line 14:** Replace `"author": "Your Name"` with your actual name or organization
+- ✅ **Updated:** Author set to `"Khizr Malik"`
 
 ## 4. NPM Package Name (Optional)
 
@@ -83,10 +73,10 @@ These are intentionally left as placeholders for users to fill in.
 
 ## 🎯 Quick Setup Checklist
 
-- [ ] Replace all instances of `your-org` with your GitHub organization/username
-- [ ] Update author name in package.json
-- [ ] Create template repository for Galaxy apps
-- [ ] Update documentation URLs
+- [x] Replace all instances of `your-org` with your GitHub organization/username
+- [x] Update author name in package.json
+- [x] Create template repository for Galaxy apps
+- [x] Update documentation URLs
 - [ ] Test the CLI locally with `npm link`
 - [ ] Publish to npm with `npm publish`
 

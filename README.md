@@ -209,13 +209,9 @@ DATABASE_URL=your-database-url
 
 **⚠️ Important:** The CLI references a template repository that needs to be created:
 
-1. **Galaxy Template**: `github:your-org/galaxy-template` (used for both Core and Feature apps)
+1. **Galaxy Template**: `github:khizrmalikk/template-core` (used for both Core and Feature apps)
 
 The differentiation between Core and Feature apps is handled by the `galaxy.config.ts` file, not by separate templates.
-
-Replace `your-org` with your GitHub organization/username in:
-- `/src/commands/create.js` (line ~236)
-- Template JSON file
 
 You can also use the `--template` flag to specify custom templates:
 
@@ -263,17 +259,15 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 📝 License
 
-MIT © [Your Name]
+MIT © [Khizr Malik](https://github.com/khizrmalikk)
 
 ## 🐛 Known Issues & TODOs
 
-1. **Template Repository**: Need to create actual template repository
-   - Replace `github:your-org/galaxy-template` with actual repo
+1. **Template Repository**: ✅ Template repository created at `github:khizrmalikk/template-core`
 
-2. **Repository URLs**: Update these placeholders:
-   - Package.json repository URL
-   - Documentation links in created projects
-   - GitHub organization references
+2. **Repository URLs**: ✅ Updated with actual GitHub URLs:
+   - Package.json repository URL: `https://github.com/khizrmalikk/galaxy-cli`
+   - Template repository: `github:khizrmalikk/template-core`
 
 3. **Future Enhancements**:
    - [ ] Deploy command
@@ -291,9 +285,9 @@ MIT © [Your Name]
 
 ## 📚 Resources
 
-- [Galaxy Architecture Guide](https://github.com/your-org/galaxy-docs)
-- [Galaxy System Documentation](https://github.com/your-org/galaxy-system)
-- [Template Repository](https://github.com/your-org/galaxy-templates)
+- [Galaxy CLI Documentation](https://github.com/khizrmalikk/galaxy-cli)
+- [Galaxy Template Repository](https://github.com/khizrmalikk/template-core)
+- [Galaxy System Architecture](https://github.com/khizrmalikk/galaxy-cli#readme)
 
 ---
 

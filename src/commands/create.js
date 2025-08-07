@@ -190,50 +190,7 @@ export const createCommand = new Command('create')
         await degit(options.template).clone(projectPath);
       } else {
         // Use default Galaxy template (same for both Core and Feature apps)
-        // TODO: Replace with actual template repository URL
-        // Example: await degit('github:your-org/galaxy-template').clone(projectPath);
-        
-        // For now, create basic structure
-        await fs.ensureDir(projectPath);
-        await fs.ensureDir(path.join(projectPath, 'src'));
-        await fs.ensureDir(path.join(projectPath, 'src/config'));
-        await fs.ensureDir(path.join(projectPath, 'public'));
-        
-        // Create a basic package.json
-        const packageJson = {
-          name: projectName,
-          version: '0.1.0',
-          private: true,
-          scripts: {
-            dev: 'next dev',
-            build: 'next build',
-            start: 'next start',
-            lint: 'next lint'
-          },
-          dependencies: {
-            next: '^14.0.0',
-            react: '^18.2.0',
-            'react-dom': '^18.2.0'
-          },
-          devDependencies: {
-            '@types/node': '^20.0.0',
-            '@types/react': '^18.2.0',
-            '@types/react-dom': '^18.2.0',
-            'typescript': '^5.0.0',
-            'tailwindcss': '^3.3.0',
-            'postcss': '^8.4.0',
-            'autoprefixer': '^10.4.0'
-          }
-        };
-        
-        await fs.writeJson(
-          path.join(projectPath, 'package.json'), 
-          packageJson, 
-          { spaces: 2 }
-        );
-        
-        // NOTE: In production, replace the above with:
-        // await degit('github:your-org/galaxy-template').clone(projectPath);
+        await degit('github:khizrmalikk/template-core').clone(projectPath);
       }
 
       // Update galaxy.config.ts
@@ -383,8 +340,8 @@ MIT
       console.log(chalk.cyan(`  ${devCmd}`));
       
       console.log('\n' + chalk.bold('📚 Resources:'));
-      console.log(chalk.dim('  - Galaxy Docs: https://github.com/your-org/galaxy-docs'));
-      console.log(chalk.dim('  - Galaxy CLI: https://github.com/your-org/galaxy-cli'));
+      console.log(chalk.dim('  - Galaxy Docs: https://github.com/khizrmalikk/galaxy-cli#readme'));
+      console.log(chalk.dim('  - Galaxy CLI: https://github.com/khizrmalikk/galaxy-cli'));
       
       if (appType === 'feature') {
         console.log('\n' + chalk.bold('🔗 Feature App Setup:'));
